@@ -1,24 +1,24 @@
 #include <iostream>
 
 int main() {
-    int size = 20;
+    const int size = 20;
     int arr[size];
     
-    std::cout << "изначальный массив: ";
-    for(int i = 0; i < 20; i++) {
+    std::cout << "Изначальный массив: ";
+    for(int i = 0; i < size; i++) {
         arr[i] = rand() % 20;
         std::cout << arr[i] << ' ';
     }
     std::cout << std::endl;
 
-    for(int i = 0; i < 10; i++) {
+    for(int i = 0; i < size / 2; i++) {
         int temp = arr[i];
         arr[i] = arr[size - 1 - i];
         arr[size - 1 - i] = temp;
     }
 
-    std::cout << "перевернутый массив: ";
-    for(int i = 0; i < 20; i++) {
+    std::cout << "Перевернутый массив: ";
+    for(int i = 0; i < size; i++) {
         std::cout << arr[i] << ' ';
     }
 

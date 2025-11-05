@@ -1,7 +1,6 @@
 #include "sort.hpp"
-#include <iostream>
 
-void srt::sort::shellsort(int arr[], size_t size){
+void srt::shellsort(int arr[], const int size){
 	for (int d = size / 2; d > 0; d = d / 2) {
         for (int i = d; i < size; i++) {
             int temp = arr[i];

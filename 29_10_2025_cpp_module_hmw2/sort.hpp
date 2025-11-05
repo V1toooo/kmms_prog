@@ -3,8 +3,6 @@
 #include <iostream>
 
 namespace srt{
-	namespace sort{
-		void shellsort(int arr[], size_t size);
-	}
+	void shellsort(int arr[], const int size);
 }
 #endif

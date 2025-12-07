@@ -1,15 +1,15 @@
 #include "menu_items.hpp"
 #include "menu_functions.hpp"
 
-const MenuItem ALGEBRA_SUMM = {"1 - Xoчy научиться складывать!", algebra_summ_func, &ALGEBRA};
-const MenuItem ALGEBRA_SUBSTRACT = {"2 - Xoчy научиться вычитать!", algebra_substract_func, &ALGEBRA};
-const MenuItem ALGEBRA_MULTIPLY = {"3 - Xoчy научиться умножать!", algebra_multiply_func, &ALGEBRA};
-const MenuItem ALGEBRA_DIVIDE = {"4 - Xoчy научиться делить!", algebra_divide_func, &ALGEBRA};
-const MenuItem ALGEBRA_GO_BACK = {"0 - Выйти в главное меню!", algebra_go_back_func, &ALGEBRA};
+const MenuItem ALGEBRA_SUMM = {"1 - РҐРѕС‡Сѓ РЅР°СѓС‡РёС‚СЊСЃСЏ СЃРєР»Р°РґС‹РІР°С‚СЊ!", algebra_summ_func, &ALGEBRA};
+const MenuItem ALGEBRA_SUBSTRACT = {"2 - РҐРѕС‡Сѓ РЅР°СѓС‡РёС‚СЊСЃСЏ РІС‹С‡РёС‚Р°С‚СЊ!", algebra_substract_func, &ALGEBRA};
+const MenuItem ALGEBRA_MULTIPLY = {"3 - РҐРѕС‡Сѓ РЅР°СѓС‡РёС‚СЊСЃСЏ СѓРјРЅРѕР¶Р°С‚СЊ!", algebra_multiply_func, &ALGEBRA};
+const MenuItem ALGEBRA_DIVIDE = {"4 - РҐРѕС‡Сѓ РЅР°СѓС‡РёС‚СЊСЃСЏ РґРµР»РёС‚СЊ!", algebra_divide_func, &ALGEBRA};
+const MenuItem ALGEBRA_GO_BACK = {"0 - Р’С‹Р№С‚Рё РІ РіР»Р°РІРЅРѕРµ РјРµРЅСЋ!", algebra_go_back_func, &ALGEBRA};
 
-const MenuItem ANALYSIS_DIF = {"1 - Xoчy изучить дифференциальное исчисление!", analysis_dif_func, &ANALYSIS};
-const MenuItem ANALYSIS_INT = {"2 - Xoчy изучить интегральное исчисление!", analysis_int_func, &ANALYSIS};
-const MenuItem ANALYSIS_GO_BACK = {"0 - Выйти в главное меню!", analysis_go_back_func, &ANALYSIS};
+const MenuItem ANALYSIS_DIF = {"1 - РҐРѕС‡Сѓ РёР·СѓС‡РёС‚СЊ РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅРѕРµ РёСЃС‡РёСЃР»РµРЅРёРµ!", analysis_dif_func, &ANALYSIS};
+const MenuItem ANALYSIS_INT = {"2 - РҐРѕС‡Сѓ РёР·СѓС‡РёС‚СЊ РёРЅС‚РµРіСЂР°Р»СЊРЅРѕРµ РёСЃС‡РёСЃР»РµРЅРёРµ!", analysis_int_func, &ANALYSIS};
+const MenuItem ANALYSIS_GO_BACK = {"0 - Р’С‹Р№С‚Рё РІ РіР»Р°РІРЅРѕРµ РјРµРЅСЋ!", analysis_go_back_func, &ANALYSIS};
 
 
 namespace{
@@ -22,7 +22,7 @@ namespace{
     };
 };
 const int algebra_size = sizeof(algebra_children) / sizeof(algebra_children[0]);
-const MenuItem ALGEBRA = {"1 - Хочу изучать алгебру!", show_menu, &STUDY, algebra_children, algebra_size}; 
+const MenuItem ALGEBRA = {"1 - РҐРѕС‡Сѓ РёР·СѓС‡Р°С‚СЊ Р°Р»РіРµР±СЂСѓ!", show_menu, &STUDY, algebra_children, algebra_size}; 
 
 
 namespace{
@@ -33,9 +33,9 @@ namespace{
     };
 };
 const int analysis_size = sizeof(analysis_children) / sizeof(analysis_children[0]);
-const MenuItem ANALYSIS = {"2 - Хочу изучать математический анализ!", show_menu, &STUDY, analysis_children, analysis_size};
+const MenuItem ANALYSIS = {"2 - РҐРѕС‡Сѓ РёР·СѓС‡Р°С‚СЊ РјР°С‚РµРјР°С‚РёС‡РµСЃРєРёР№ Р°РЅР°Р»РёР·!", show_menu, &STUDY, analysis_children, analysis_size};
 
-const MenuItem STUDY_GO_BACK = {"0 - Выйти в главное меню!", study_go_back_func, &STUDY};
+const MenuItem STUDY_GO_BACK = {"0 - Р’С‹Р№С‚Рё РІ РіР»Р°РІРЅРѕРµ РјРµРЅСЋ!", study_go_back_func, &STUDY};
 namespace{
     const MenuItem* const study_children[] = {
         &STUDY_GO_BACK,
@@ -44,10 +44,10 @@ namespace{
     };  
 }
 const int study_size = sizeof(study_children) / sizeof(study_children[0]);
-const MenuItem STUDY = {"1 - Хочу учиться!", show_menu, &MAIN, study_children, study_size};
+const MenuItem STUDY = {"1 - РҐРѕС‡Сѓ СѓС‡РёС‚СЊСЃСЏ!", show_menu, &MAIN, study_children, study_size};
 
 
-const MenuItem EXIT = {"0 - Лучше пойду полежу...", exit_func, &MAIN};
+const MenuItem EXIT = {"0 - Р›СѓС‡С€Рµ РїРѕР№РґСѓ РїРѕР»РµР¶Сѓ...", exit_func, &MAIN};
 
 
 namespace{

@@ -8,13 +8,13 @@ const MenuItem* exit_func(const MenuItem* current){
     return nullptr;
 }
 
-const MenuItem* show_menu(const MenuItem* current){        //функция, возвращаемый тип: MenuItem*
-    cout << "Приветствую тебя, мой юный ученик!" << endl;
+const MenuItem* show_menu(const MenuItem* current){
+    cout << "РџСЂРёРІРµС‚СЃС‚РІСѓСЋ С‚РµР±СЏ, РјРѕР№ СЋРЅС‹Р№ СѓС‡РµРЅРёРє!" << endl;
     for (int i = 1; i < current->children_count; i++){
         cout << current->children[i]->title << endl;
     }
     cout << current->children[0]->title << endl;
-    cout << "Обучайка > ";
+    cout << "РћР±СѓС‡Р°Р№РєР° > ";
 
     int user_input;
     cin >> user_input;
